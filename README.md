@@ -3,7 +3,7 @@
 **Un bot qui surveille les places TGV à 0 € de l’abonnement MAX Jeune sur mon trajet du week-end, et me prévient sur Telegram dès que quelque chose change.**
 
 [![Tests](https://github.com/ayoub-aitkaddi/alerte-max/actions/workflows/tests.yml/badge.svg)](https://github.com/ayoub-aitkaddi/alerte-max/actions/workflows/tests.yml)
-![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-aucune-success)
 ![Licence](https://img.shields.io/badge/licence-MIT-blue)
 
@@ -120,7 +120,7 @@ L’agenda est optionnel : il se passe avec `--busy`, sous la forme d’un fichi
 python -m unittest discover -s tests -v
 ```
 
-Les tests couvrent le calcul de la fenêtre glissante, les filtres (créneaux, agenda, trains déjà partis, doublons), l’écriture et la relecture de l’état (y compris le passage à la nouvelle année), le diff et la recommandation. Ils tournent en CI sur Python 3.9 et 3.12.
+Les tests couvrent le calcul de la fenêtre glissante, les filtres (créneaux, agenda, trains déjà partis, doublons), l’écriture et la relecture de l’état (y compris le passage à la nouvelle année), le diff et la recommandation. Ils tournent en CI sur Python 3.10 et 3.13.
 
 ## Structure
 

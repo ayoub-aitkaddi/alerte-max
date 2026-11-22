@@ -11,7 +11,7 @@ L’état (les places déjà signalées) est stocké dans un message épinglé d
 conversation Telegram : aucune base de données, aucun fichier à conserver
 entre deux exécutions, et l’utilisateur voit l’état courant d’un coup d’œil.
 
-Uniquement la bibliothèque standard Python (3.9+).
+Uniquement la bibliothèque standard Python (3.10+).
 
 Usage :
     export TELEGRAM_TOKEN=...  TELEGRAM_CHAT_ID=...
