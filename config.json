@@ -1,0 +1,21 @@
+{
+  "fuseau": "Europe/Paris",
+  "fenetre_weekends": 3,
+  "marge_agenda_minutes": 60,
+  "aller": {
+    "origines": ["PARIS (intramuros)"],
+    "destinations": ["METZ VILLE", "FORBACH"],
+    "jours": {"vendredi": "15:00", "samedi": "00:00"}
+  },
+  "retour": {
+    "origines": ["METZ VILLE", "FORBACH"],
+    "destinations": ["PARIS (intramuros)"],
+    "jours": {"dimanche": "00:00"}
+  },
+  "jours_repli": ["samedi"],
+  "noms_gares": {
+    "PARIS (intramuros)": "Paris-Est",
+    "METZ VILLE": "Metz",
+    "FORBACH": "Forbach"
+  }
+}

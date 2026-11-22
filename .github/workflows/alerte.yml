@@ -1,0 +1,27 @@
+name: Alerte MAX Jeune
+
+# Le jeu de données SNCF est mis à jour une fois par jour en début de matinée :
+# un passage quotidien suffit. Les horaires cron de GitHub sont en UTC.
+on:
+  schedule:
+    - cron: "43 6 * * *"   # 7 h 43 à Paris en hiver, 8 h 43 en été
+  workflow_dispatch:        # bouton « Run workflow » pour tester à la main
+
+concurrency:
+  group: alerte-max
+  cancel-in-progress: false
+
+jobs:
+  alerte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Vérifier les places et prévenir sur Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python alerte_max.py

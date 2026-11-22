@@ -1,0 +1,7 @@
+.env
+busy.json
+__pycache__/
+*.pyc
+.venv/
+.idea/
+.vscode/
